@@ -171,9 +171,9 @@ footer {
 .footer-social a {
   color: var(--color-text-primary);
   font-size: 20px;
-  margin: 0 8px;
+
   padding: 10px;
-  display: inline-block;
+
   background-color: var(--color-bg-social);
   border-radius: 10px;
 }
@@ -203,7 +203,7 @@ footer {
 .subscribe-box input {
   flex: 1;
   border: none;
-  padding: 10px 20px;
+
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
 }
@@ -296,7 +296,7 @@ input:focus {
 
   .divider::before,
   .divider::after {
-    width: 25%;
+    width: 20%;
   }
 
   h2.fw-bold.titel {
