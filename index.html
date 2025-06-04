@@ -16,43 +16,109 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
-            <!-- <h2 class="fw-bold text-white me-3">esh7nha</h2> -->
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <!-- اللوجو - ظاهر دايماً -->
+            <a class="navbar-brand" href="#">GameCharge</a>
+
+            <!-- زر الهامبرجر - يظهر فقط في الشاشات الصغيرة -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- القائمة العادية تظهر في الشاشات الكبيرة فقط -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNavbar">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-2 align-items-center">
                     <li class="nav-item">
-                        <a class="btn btn-outline-light nav-link nav-link-circle" href="#"><i class="bi bi-bag"></i></a>
+                        <a class="btn btn-outline-light nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light nav-link nav-link-circle" href="#"><i
-                                class="bi bi-person"></i></a>
+                        <a class="btn btn-outline-light nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <button id="toggle-theme" class="btn btn-outline-light nav-link nav-link-circle">
+                        <a class="btn btn-outline-light nav-link" href="#">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light nav-link" href="#">Support</a>
+                    </li>
+
+
+
+
+                </ul>
+
+
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex gap-2 align-items-center">
+
+                    <li class="nav-item d-flex gap-2 align-items-center">
+                        <a href="#" class="btn btn-outline-light nav-link-circle"><i class="bi bi-bag"></i></a>
+                        <a href="#" class="btn btn-outline-light nav-link-circle"><i class="bi bi-person"></i></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <input type="text" class="form-control search-input me-2" id="searchInput"
+                            placeholder="Search games...">
+                        <button class="btn btn-outline-light" id="searchBtn" type="button"><i
+                                class="bi bi-search"></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="toggle-theme" class="btn btn-outline-light nav-link nav-link-circle" type="button"
+                            aria-label="Toggle Theme">
                             <i class="bi bi-sun-fill" id="theme-icon"></i>
                         </button>
                     </li>
                 </ul>
 
-                <form class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
-                    <button class="btn btn-outline-light me-2" id="searchBtn" type="button">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    <input type="text" class="form-control search-input" id="searchInput" placeholder="ابحث هنا...">
-                </form>
             </div>
+
+            <!-- قائمة الـ offcanvas تظهر فقط في الموبايل -->
+            <div class="offcanvas offcanvas-start text-bg-dark d-lg-none" tabindex="-1" id="mobileMenu"
+                aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mobileMenuLabel">GameCharge</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-column gap-3">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Games</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Offers</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Support</a></li>
+                        <li class="nav-item d-flex gap-3">
+                            <a href="#" class="btn btn-outline-light nav-link-circle"><i class="bi bi-bag"></i></a>
+                            <a href="#" class="btn btn-outline-light nav-link-circle"><i class="bi bi-person"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="toggle-theme-mobile" class="btn btn-outline-light nav-link nav-link-circle"
+                                type="button" aria-label="Toggle Theme">
+                                <i class="bi bi-sun-fill" id="theme-icon-mobile"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <input type="text" class="form-control search-input" id="searchInputMobile"
+                                placeholder="Search games...">
+                        </li>
+                        <li class="nav-item mt-2">
+                            <button class="btn btn-outline-light w-100" id="searchBtnMobile" type="button"
+                                aria-label="Search">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </nav>
 
 
-
     <main class="container ">
 
-        <div class="row">
+        <div class="row align-items-center">
 
             <div class="col-12 col-sm-6 col-md-5 col-lg-5 col-xl-5  d-none d-sm-block">
                 <div class=" container ">
@@ -60,7 +126,7 @@
                     <div class=" row g-4 align-items-center justify-content-center">
 
                         <!-- Card 1 -->
-                        <div class="col-md-12">
+                        <div class="col-md-12 ">
                             <div class="card position-relative p-3 shadow">
                                 <div class="cover_card_bg w-100 position-relative"
                                     style="background-image: url('https://axiesreact.themesflat.co/static/media/image-box-10.f3abb5b73887d54521fb.jpg');">
@@ -104,13 +170,13 @@
                 <div class="login-container text-center">
                     <h2 class="fw-bold mb-4">Login To NFTs</h2>
 
-
+                    <!-- 
                     <div class="divider">Login with social</div>
 
                     <div class="d-flex gap-3 mb-4 justify-content-center">
                         <button class="social-btn"><i class="bi bi-google me-2"></i> Google</button>
                         <button class="social-btn"><i class="bi bi-facebook me-2"></i> Facebook</button>
-                    </div>
+                    </div> -->
 
                     <div class="divider">Or login with email</div>
 

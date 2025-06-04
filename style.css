@@ -411,3 +411,7 @@ input::placeholder {
   color: white !important;
   opacity: 1;
 }
+
+.nav-link:hover {
+  background: none !important;
+}
